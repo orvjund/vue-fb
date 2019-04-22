@@ -20,7 +20,7 @@ module.exports = {
     'vue/html-indent': 'error',
     'vue/html-quotes': 'error',
     'vue/html-self-closing': 'error',
-    'vue/max-attributes-per-line': 'error',
+    'vue/max-attributes-per-line': 'off',
     'vue/multiline-html-element-content-newline': 'error',
     'vue/mustache-interpolation-spacing': 'error',
     'vue/name-property-casing': 'error',
@@ -30,7 +30,7 @@ module.exports = {
     'vue/prop-name-casing': 'error',
     'vue/require-default-prop': 'error',
     'vue/require-prop-types': 'error',
-    'vue/singleline-html-element-content-newline': 'error',
+    'vue/singleline-html-element-content-newline': 'off',
     'vue/v-bind-style': 'error',
     'vue/v-on-style': 'error',
     'vue/attributes-order': 'error',
@@ -54,7 +54,8 @@ module.exports = {
     'vue/script-indent': 'error',
     'vue/space-infix-ops': 'error',
     'vue/space-unary-ops': 'error',
-    'vue/v-on-function-call': 'error'
+    'vue/v-on-function-call': 'error',
+    'linebreak-style': 'off',
   },
 
   parserOptions: {

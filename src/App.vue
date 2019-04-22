@@ -1,14 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    </div> -->
+    <router-view />
   </div>
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+* {
+  font-family: 'Indie Flower', cursive;
+}
+body {
+  margin: 0;
+  font-size: 10px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -27,5 +35,14 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+wired-input {
+  display: block;
+  width: calc(100% - 10px);
+}
+
+wired-button {
+  width: calc(100% - 20px);
 }
 </style>
