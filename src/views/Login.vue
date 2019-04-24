@@ -1,34 +1,33 @@
 <template>
   <div class="login-container">
-    <wired-card
+    <div
       class="login-card"
       @keyup.enter="attempLogin"
     >
       <h1>Login with email and password</h1>
       <div class="login-controls-holder">
-        <wired-input
+        <input
           v-model="email"
           placeholder="Your email"
           type="email"
           name="email"
-          @input="(e) => email = e.target.value"
-        />
-        <wired-input
+        >
+        <input
           v-model="password"
           placeholder="Your password"
           type="password"
           name="password"
-          @input="(e) => password = e.target.value"
-        />
-        <wired-button
+        >
+        <button
           class="login-button"
           elevation="2"
+          type="button"
           @click="attempLogin"
         >
           Login
-        </wired-button>
+        </button>
       </div>
-    </wired-card>
+    </div>
   </div>
 </template>
 

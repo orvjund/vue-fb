@@ -38,12 +38,4 @@ body {
   color: #42b983;
 }
 
-wired-input {
-  display: block;
-  width: calc(100% - 10px);
-}
-
-wired-button {
-  width: calc(100% - 20px);
-}
 </style>
