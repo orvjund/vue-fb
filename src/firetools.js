@@ -97,10 +97,7 @@ const auth = {
 
     return firebase.auth()
       .signInWithEmailAndPassword(email, password)
-      .then(() => firebase.auth().currentUser)
-      .catch((error) => {
-        throw error;
-      });
+      .then(() => firebase.auth().currentUser);
   },
   async loggout() { return firebase.auth().signOut(); },
 };
