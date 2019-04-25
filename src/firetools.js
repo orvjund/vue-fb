@@ -102,5 +102,14 @@ const auth = {
   async loggout() { return firebase.auth().signOut(); },
 };
 
+const storage = {
+  async uploadFile(path, file) { // TODO: Add progress callback
+    return firebase.storage()
+      .ref()
+      .child(path).put(file)
+      .then(snapshot => snapshot.ref.getDownloadURL());
+  },
+};
+
 export default firebase;
-export { firestore, auth };
+export { firestore, auth, storage };
