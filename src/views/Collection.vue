@@ -12,11 +12,11 @@
 
     <div v-if="selectedCollection" class="songs-list">
       <div
-        v-for="song in selectedCollection.songs"
+        v-for="song in songs"
         :key="song.id"
         class="song"
       >
-        {{ song.name }}
+        {{ song.title }}
       </div>
     </div>
   </div>
@@ -30,14 +30,17 @@ export default {
   data: () => ({
     selectedCollection: null,
     collections: [],
+    songs: [],
   }),
   watch: {
     async selectedCollection() {
-      if (!this.selectedCollection) return;
+      if (this.selectedCollection && !this.selectedCollection.songs) {
+        this.songs = [];
 
-      if (!this.selectedCollection.songs) {
         const songsQuery = await firestore.buildQuery('songs', 'collectionId', '==', this.selectedCollection.id);
         this.selectedCollection.songs = await firestore.executeQuery(songsQuery);
+
+        this.songs = this.selectedCollection.songs;
       }
     },
   },
