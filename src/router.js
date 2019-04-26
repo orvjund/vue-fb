@@ -21,5 +21,10 @@ export default new Router({
       name: 'upload',
       component: () => import(/* webpackChunkName: "upload" */ './views/Upload.vue'),
     },
+    {
+      path: '/collection',
+      name: 'collection',
+      component: () => import(/* webpackChunkName: "collection" */ './views/Collection.vue'),
+    },
   ],
 });

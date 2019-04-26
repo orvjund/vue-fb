@@ -79,6 +79,22 @@ const firestore = {
 
     return docs;
   },
+  async executeQuery(query) {
+    return query
+      .get()
+      .then((querySnapshot) => {
+        const docs = [];
+
+        querySnapshot.forEach((doc) => {
+          docs.push({
+            id: doc.id,
+            ...doc.data(),
+          });
+        });
+
+        return docs;
+      });
+  },
 };
 
 const auth = {
